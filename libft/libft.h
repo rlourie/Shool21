@@ -6,7 +6,7 @@
 /*   By: rlourie <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 12:26:07 by rlourie           #+#    #+#             */
-/*   Updated: 2021/10/04 14:53:58 by rlourie          ###   ########.fr       */
+/*   Updated: 2021/10/04 15:42:34 by rlourie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,6 @@
 
 int	ft_isalpha(int	c);
 int	ft_isdigit(int	c);
+int	ft_isalnum(int	c);
 
 #endif
