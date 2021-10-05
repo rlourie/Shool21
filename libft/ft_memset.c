@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlourie <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/04 15:39:31 by rlourie           #+#    #+#             */
-/*   Updated: 2021/10/04 17:00:10 by rlourie          ###   ########.fr       */
+/*   Created: 2021/10/05 13:34:29 by rlourie           #+#    #+#             */
+/*   Updated: 2021/10/05 14:04:54 by rlourie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int main()
+
+void	*ft_memset(void	*b, int	c, size_t	len)
 {
-	  // Массив источник данных
-	  unsigned char src[6] = "123456";
-	
-	  // Массив приемник данных
-	  unsigned char dst[6] = "";
+	size_t			i;
+	unsigned char	*buf;
 
-	  // Копируем 6 байт из массива src в массив dst
-	  ft_memmove (src + 2, src + 3, 2);
-
-	  // Вывод массива dst на консоль
-	  printf ("dst: %s\n",src);
-
-	  return 0;
+	i = 0;
+	buf = (unsigned char *)b;
+	while (i < len)
+	{
+		buf[i] = c;
+		i++;
+	}
+	return (b);
 }

@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlourie <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/04 15:39:31 by rlourie           #+#    #+#             */
-/*   Updated: 2021/10/04 17:00:10 by rlourie          ###   ########.fr       */
+/*   Created: 2021/10/05 14:12:48 by rlourie           #+#    #+#             */
+/*   Updated: 2021/10/05 14:13:49 by rlourie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int main()
+
+void	ft_bzero(void	*s, size_t	n)
 {
-	  // Массив источник данных
-	  unsigned char src[6] = "123456";
+	size_t			i;
+	unsigned char	*buf;
 	
-	  // Массив приемник данных
-	  unsigned char dst[6] = "";
-
-	  // Копируем 6 байт из массива src в массив dst
-	  ft_memmove (src + 2, src + 3, 2);
-
-	  // Вывод массива dst на консоль
-	  printf ("dst: %s\n",src);
-
-	  return 0;
+	i = 0;
+	buf = (unsigned char *)s;
+	while (i < n)
+	{
+		buf[i] = 0;
+		i++;
+	}
+	s = buf;
 }
