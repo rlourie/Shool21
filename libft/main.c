@@ -14,16 +14,11 @@
 int main()
 {
 	  // Массив источник данных
-	  unsigned char src[6] = "123456";
+	  unsigned char src[10] = "123346";
 	
 	  // Массив приемник данных
-	  unsigned char dst[6] = "";
+	  unsigned char dst[10] = "";
 
-	  // Копируем 6 байт из массива src в массив dst
-	  ft_memmove (src + 2, src + 3, 2);
-
-	  // Вывод массива dst на консоль
-	  printf ("dst: %s\n",src);
-
+	  
 	  return 0;
 }
